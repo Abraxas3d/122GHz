@@ -59,7 +59,8 @@ diameter = show_offset_reflector?820:show_basic_object?200:200;  // mm
 //diameter = show_basic_object?200:show_offset_reflector?600:100;  // mm
 num_x_points = show_offset_reflector?100:200; // more better detail but slower render
 num_r_points = show_offset_reflector?100:100; // more better detail but slower render
-focal_length = show_offset_reflector?50:show_basic_object?75:60; // mm
+//60mm for focal length gives f/D of 0.3
+focal_length = show_offset_reflector?50:show_basic_object?75:60; // mm 
 base_thickness = 5; // mm
 material_thickness = 2; //mm
 
