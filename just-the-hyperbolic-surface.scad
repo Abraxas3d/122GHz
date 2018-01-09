@@ -1,3 +1,6 @@
+//Hyperbolic Solid in OpenSCAD
+//by Michelle Thompson @abraxas3d
+
 //A hyperbola is the set of all points where the difference 
 //in the distance from intstwo fixed po is a constant. 
 
