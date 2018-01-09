@@ -16,8 +16,8 @@
 
 //a and b are the dimensions of the box that defines the
 //asymptotes of the hyperbolic curve. 
-a = 20; //affects height of the vertex above origin and how tall shape ends up.
-b = 50; //radius 
+a = 40; //affects height of the vertex above origin and how tall shape ends up.
+b = 40; //radius 
 
 //resolution variable in OpenSCAD. Higher numbers mean smoother surface.
 $fn = 200;
@@ -100,7 +100,8 @@ translate([0, 0, 0]) polygon(full_set_horiz);
 */
 
 //use rotate_extrude to rotate the 2d polygon and make it a 3d shape.
-//translate moves it to origin.
+//translate moves it to origin. Set -a to 0 if you want it to be at
+//its calculated position!
 translate([0, 0, -a]) rotate_extrude(angle = 360, convexity = 10) polygon(full_set_horiz);
 
 
