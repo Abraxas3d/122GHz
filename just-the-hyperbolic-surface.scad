@@ -17,16 +17,25 @@
 // y = b tan(angle)
 // angle varies from 0 to pi/2
 
+//f = 75 = 2*c. c = 75/2. get this from the dish diameter
+c = 75/2;
+echo("c is ", c);
+
 //a and b are the dimensions of the box that defines the
 //asymptotes of the hyperbolic curve. 
-a = 40; //affects height of the vertex above origin and how tall shape ends up.
-b = 40; //radius 
+
+b = 200*(1/16); //radius set to 1/10 of dish diameter? to get diameter to be 1/5?
+echo("b is ", b);
+
+a = sqrt(c*c - b*b); //if we have b and c, we can calculate a from geometry of hyperbola
+echo("a is ", a);
+
 
 //resolution variable in OpenSCAD. Higher numbers mean smoother surface.
 $fn = 200;
 
-max_angle = 45; //affects how tall the shape ends up. 
-angle_resolution = 0.5;
+max_angle = 45; //calculate all the hyperbola!
+angle_resolution = 0.5; //calculate at a good resolution
 
 //granularity should match the length of the polygon vector
 //before we add the two finishing points that complete a closed curve.
@@ -102,10 +111,24 @@ full_set_horiz = concat(horiz_hyper(0), [[0, replace_horiz]], [[0,a]]);
 translate([0, 0, 0]) polygon(full_set_horiz);
 */
 
+
+difference() {
 //use rotate_extrude to rotate the 2d polygon and make it a 3d shape.
-//translate moves it to origin. Set -a to 0 if you want it to be at
-//its calculated position!
-translate([0, 0, -a]) rotate_extrude(angle = 360, convexity = 10) polygon(full_set_horiz);
+translate([0, 0, 0]) rotate_extrude(angle = 360, convexity = 10) polygon(full_set_horiz);
+
+//here's a base so we can stick struts on.
+base_thickness = 100;
+translate([0, 0, (c+a)/2+(c-a)]) cylinder(h = base_thickness, r1 = b, r2 = b, center=false);
+
+
+translate([-5,0,(c+a)/2+(c-a)-0.5])
+{
+    linear_extrude(0.5)
+        text("12.5%", size = 2);
+}
+
+}
+
 
 
 } else {
