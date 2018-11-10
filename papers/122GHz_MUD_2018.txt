@@ -1,0 +1,32 @@
+Here's a demonstration of a 3D printed Cassegrain antenna system for 122GHz amateur radio. It was presented in the demonstration room at Microwave Update 2018.
+
+https://youtu.be/NbTWWNvtvOU
+
+122 GHz is an amateur radio band. There's activity and distance records and some contesting. 122GHz has significant attenuation due to atmospheric absorption. Specifically, oxygen gets in the way. 
+
+I've been working on a 3D printed rig for 122GHz. This was sparked by a request from Alan Devlin VK3XPD for a 3D printed subreflector for a Cassegrain dish. People generally get by with a flat subreflector, but you can get better performance if it's a hyperbolic curve matched to the feed and parabolic dish. 
+
+So what is 122GHz good for? Well, car radar for one thing. That's what Silicon Radar does. They're a company in Germany, and they have a radar development board and Millimeter Wave Integrated Circuits (MMICs) for 122GHz. The patch antennas are actually on the chip. The dev boards were used in this experiment. They send out a wide chirped radar signal and measure the return. There is software provided by Silicon Radar that runs the dev board. 
+
+The goal for Microwave Update 2018 was to verify a 3D printed Cassegrain antenna design for 122GHz amateur use. This design was adapted from the Customizable Cassegrain dish by drxenocide on Thingiverse. Link is in the show notes.https://www.thingiverse.com/thing:1935824
+
+This thing creates a customizable Cassegrain Reflector dish. It was created using the equations from the paper by Peter Hannan, "Microwave antennas derived from the Cassegrain telescope," in IRE Transactions on Antennas and Propagation, vol. 9, no. 2, pp. 140-153, March 1961.
+
+The antenna parts were designed, the 3d model specified, the parts were printed, the resulting pieces were metallized (with MG Chemicals conductive paint), and then the parts combined into their final form.
+
+Design files and papers can be found here: https://github.com/Abraxas3d/122GHz
+
+The assemblies were taken to Microwave Update 2018 and set up in the demonstration room. Here's what happened next. 
+
+So what were the results? Here's some screenshots from the Silicon Radar software with and without the Cassegrain antenna installed over the stock lens in the development board.  
+
+And, there's more. Please read Mike Levelle's wonderful report on his efforts with the Silicon Radar chip in building a simple 122GHz transceiver. Link is in the show notes.
+
+Mike has a tremendous amount of expertise and enthusiasm for the higher microwave bands and is a fantastic mentor.
+
+http://www.bay-net.org/docs/k6ml-122GHzradio-baycon2018.pdf
+
+What's next? Building a radio! Stay tuned and stay on the air!
+
+https://openresearch.institute
+http://microwaveupdate.org/
