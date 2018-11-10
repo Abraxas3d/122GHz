@@ -5,4 +5,4 @@ The hyperbolic solid sub reflector is also at https://www.thingiverse.com/thing:
 
 The parabolic dish is also at https://www.thingiverse.com/thing:2751650
 
-The design presented at Microwave Update 2018 is in the MUD folder.
+The design presented at Microwave Update 2018 is in the MUD_2018 folder.
